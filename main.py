@@ -68,7 +68,7 @@ def make_order():
     if shopping_list:
         try:
             total_price = best_buy.order(shopping_list)
-            print(f"Order made!\n Total price of your order is: {total_price}")
+            print(f"Order made!\nTotal price of your order is: {total_price}")
         except ValueError as e:
             print(f"Error while processing your order: {e}")
     else:
