@@ -1,18 +1,3 @@
-"""
-Test that creating a normal product works.
-Test that creating a product with invalid details (empty name, negative price) invokes an exception.
-Test that when a product reaches 0 quantity, it becomes inactive.
-Test that product purchase modifies the quantity and returns the right output.
-Test that buying a larger quantity than exists invokes exception.
-
-Example:
-    # Empty name
-    Product("", price=1450, quantity=100)
-
-    # Negative Price
-    Product("MacBook Air M2", price=-10, quantity=100)
-"""
-
 import pytest
 import products
 

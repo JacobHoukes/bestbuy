@@ -62,6 +62,50 @@ class Product:
         return total_price
 
 
+class NonStockedProduct(Product):
+    """A product that doesn't track quantity (like digital licenses)."""
+
+    def __init__(self, name, price):
+        super().__init__(name, price, quantity=0)
+
+    def set_quantity(self, quantity):
+        """Overrides Products method set_quantity to disable quantity changes for non-stocked products."""
+        pass
+
+    def buy(self, quantity):
+        """Allows buying without affecting quantity."""
+        if not isinstance(quantity, int) or quantity <= 0:
+            raise ValueError("The purchase quantity must be a positive whole number.")
+        if not self.active:
+            raise RuntimeError("This product is inactive. You can unfortunately not purchase it.")
+        total_price = self.price * quantity
+        return total_price
+
+    def show(self):
+        """Show product information indicating it is non-stocked."""
+        return f"{self.name} (non-stocked), Price: {self.price}"
+
+
+class LimitedProduct(Product):
+    """A product that can only be bought in limited quantity per order."""
+
+    def __init__(self, name, price, quantity, maximum_per_order):
+        super().__init__(name, price, quantity)
+        if not isinstance(maximum_per_order, int) or maximum_per_order <= 0:
+            raise ValueError("The maximum per order must be a positive whole number.")
+        self.maximum_per_order = maximum_per_order
+
+    def buy(self, quantity):
+        """Buy only up to maximum_per_order."""
+        if quantity > self.maximum_per_order:
+            raise ValueError(f"You can only purchase up to {self.maximum_per_order} of this item per order.")
+        return super().buy(quantity)
+
+    def show(self):
+        """Show product information including the purchase limit."""
+        return f"{self.name} (Limited to {self.maximum_per_order} per order), Price: {self.price}, Quantity: {self.quantity}"
+
+
 def main():
     bose = Product("Bose QuietComfort Earbuds", price=250, quantity=500)
     mac = Product("MacBook Air M2", price=1450, quantity=100)
