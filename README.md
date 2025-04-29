@@ -1,18 +1,21 @@
-🛒 BestBuy – A Console-Based Store Simulator
-BestBuy is a Python project simulating a basic retail store environment, allowing users to interact with a virtual product catalog, place orders, and apply promotional offers. Despite the name, this project is not affiliated with the Best Buy retail chain—it's an educational tool for learning about object-oriented programming, user input handling, and basic commerce logic.
+# 🛒 BestBuy – A Console-Based Store Simulator
 
-📚 Features
-🧾 Product Catalog with stock management
+**BestBuy** is a Python project simulating a basic retail store environment, allowing users to interact with a virtual product catalog, place orders, and apply promotional offers.  
+> 🛑 _Note: This project is **not affiliated** with the Best Buy retail chain._
 
-🛍️ Order Processing with quantity validation
+---
 
-🎁 Promotions Engine (e.g., 30% off, second item half-price, buy 2 get 1 free)
+## 📚 Features
 
-📉 Custom Product Types like non-stocked or purchase-limited items
+- 🧾 **Product Catalog** with stock management
+- 🛍️ **Order Processing** with quantity validation
+- 🎁 **Promotions Engine** (e.g., 30% off, second item half-price, buy 2 get 1 free)
+- 📉 **Custom Product Types** like non-stocked or purchase-limited items
+- 🧪 **Console-Based Interaction Menu** for listing items, checking stock, and placing orders
 
-🧪 Console-Based Interaction Menu for listing items, checking stock, and placing orders
+---
 
-📁 Project Structure
+## 📁 Project Structure
 bash
 Copy
 Edit
