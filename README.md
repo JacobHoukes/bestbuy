@@ -15,39 +15,6 @@
 
 ---
 
-## 📁 Project Structure
-bash
-Copy
-Edit
-bestbuy/
-├── main.py          # Main program with user interface
-├── products.py      # Product classes and promotion logic
-├── store.py         # Store logic: manage products and process orders
-└── README.md
-🛠️ Getting Started
-# 1. Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/JacobHoukes/bestbuy.git
-cd bestbuy
-# 2. Run the Application
-Ensure you have Python 3 installed, then run:
-
-bash
-Copy
-Edit
-python main.py
-You’ll see a menu where you can:
-
-View available products
-
-Check total item count
-
-Place an order
-
-Exit the program
-
 ## 🧾 Example Products & Promotions
 When the app starts, it initializes the following products:
 
@@ -76,15 +43,6 @@ PercentageDiscount: e.g., 30% off
 SecondHalfPrice: Buy one at full price, second at half price
 
 Buy2Get1Free: For every 3 items, pay for 2
-
-## 🧪 Testing and Extension
-This is a great starting point for building on:
-
-Add product categories or descriptions
-
-Extend with file/database persistence
-
-Add a GUI with frameworks like Tkinter or PyQt
 
 ## 👨‍💻 Author
 Developed by Jacob Houkes as a programming exercise.
